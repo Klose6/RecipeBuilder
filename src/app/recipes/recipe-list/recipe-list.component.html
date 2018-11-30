@@ -1,0 +1,30 @@
+<div class="row">
+    <div class="col-md-12">
+        <button class="btn btn-success" (click)="addNewRecipe()">New Recipe</button>
+    </div>
+    <div *ngIf="addNew">
+        Name: <input type="text">
+        Decription: <textarea></textarea>
+    </div>
+</div>
+<hr>
+<div class="row">
+    <div class="col-md-12">
+        <a href="#" class="list-group-item clear-fix d-flex justify-content-between" *ngFor="let recipe of recipes">
+            <div class="float-left">
+                <h4 class="list-group-item-heading">
+                    {{recipe.name}}
+                </h4>
+                <p class="list-group-item-text">
+                    {{recipe.description}}
+                </p>
+            </div>
+            <div class="float-right">
+                <img src="{{recipe.imagePath}}" alt="{{recipe.name}}" class="img-responsive img-rounded" style="height: 80px; width: 110px;"/>
+            </div>
+        </a>
+        <app-recipe-item></app-recipe-item>
+    </div>
+</div>
+
+
