@@ -8,11 +8,11 @@ This project is created to manage the cooking recipes and related shopping items
 5) Edit the ingredients to buy;
 6) Check all the shopping history;
 
-##Techniques Used
-Frontend UI: Angular, Bootstrap
-Backend Web Framework: Flask
-Backend DB ORM: Flask-SQLAlchemy
-Backend Database: MySQL
+## Techniques Used
+* Frontend UI: Angular, Bootstrap
+* Backend Web Framework: Flask
+* Backend DB ORM: Flask-SQLAlchemy
+* Backend Database: MySQL
 
 
 Thanks!
