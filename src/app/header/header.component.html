@@ -1,15 +1,15 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light mb-2">
-    <a class="navbar-brand text-primary" href="#">RecipeBook</a>
+<nav class="navbar navbar-expand-lg bg-orange mb-2">
+    <a class="navbar-brand text-primary" href="/">RecipeBuilder</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar">
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportContent">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-                <a class="nav-link" href="#">Recipes</a>
+                <a class="nav-link" href="/recipes">Recipes</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Shopping List</a>
+                <a class="nav-link" href="/shopping-list">Shopping List</a>
             </li>   
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown">Manage</a>
@@ -17,6 +17,9 @@
                 <a class="dropdown-item" href="#">Save Data</a>
                 <a class="dropdown-item" href="#">Fetch Data</a>
                 </div>
+            </li>
+            <li class="nav-item">
+                <a routerLink="/about" class="nav-link">About</a>
             </li>
         </ul>
     </div>
