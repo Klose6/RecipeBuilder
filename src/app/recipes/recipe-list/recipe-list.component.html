@@ -10,7 +10,7 @@
 <hr>
 <div class="row">
     <div class="col-md-12">
-        <a href="#" class="list-group-item clear-fix d-flex justify-content-between" *ngFor="let recipe of recipes">
+        <a class="list-group-item clear-fix d-flex justify-content-between" (click)="onRecipeSelect(recipe)" *ngFor="let recipe of recipes">
             <div class="float-left">
                 <h4 class="list-group-item-heading">
                     {{recipe.name}}
@@ -23,7 +23,7 @@
                 <img src="{{recipe.imagePath}}" alt="{{recipe.name}}" class="img-responsive img-rounded" style="height: 80px; width: 110px;"/>
             </div>
         </a>
-        <app-recipe-item></app-recipe-item>
+        <!-- <app-recipe-item></app-recipe-item> -->
     </div>
 </div>
 

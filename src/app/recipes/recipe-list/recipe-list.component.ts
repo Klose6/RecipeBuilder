@@ -10,6 +10,7 @@ import { Recipe } from '../recipe.model';
 
 export class RecipeListComponent implements OnInit {
   currentNewRecipes: Recipe[] = [];
+  recipeSelected: Recipe = null;
 
   recipes: Recipe[] = [
     new Recipe('Chili Grilled Beef', 'Grilled beef with chilis', 'assets/images/recipe_chili_grilled_beef.jpg'),
@@ -23,5 +24,10 @@ export class RecipeListComponent implements OnInit {
 
   addNewRecipe() {
     // this.addNew = true;
+  }
+
+  onRecipeSelect(recipe: Recipe) {
+    this.recipeSelected = recipe;
+    console.log(recipe);
   }
 }
