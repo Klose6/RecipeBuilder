@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Recipe } from '../recipe.model';
+import { RecipeService } from '../recipe.service';
 
 
 @Component({
@@ -17,7 +18,7 @@ export class RecipeListComponent implements OnInit {
     new Recipe('Shrimp Salad', 'Grilled shrimp with salad', 'assets/images/recipe_shrimp_salad.jpg'),
     new Recipe('Chicken Flat', 'Steamed chicken with vegies', 'assets/images/recipe_chicken_flat.jpg')
   ];
-  constructor() { }
+  constructor(private recipeService: RecipeService) { }
 
   ngOnInit() {
   }
@@ -29,5 +30,6 @@ export class RecipeListComponent implements OnInit {
   onRecipeSelect(recipe: Recipe) {
     this.recipeSelected = recipe;
     console.log(recipe);
+    this.recipeService.sendSelectedRecipe(this.recipeSelected);
   }
 }
