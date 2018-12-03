@@ -14,7 +14,8 @@ export class RecipeListComponent implements OnInit {
   recipeSelected: Recipe = null;
 
   recipes: Recipe[] = [
-    new Recipe('Chili Grilled Beef', 'Grilled beef with chilis', 'assets/images/recipe_chili_grilled_beef.jpg'),
+    new Recipe('Chili Grilled Beef', 'Grilled beef with chilis', 'assets/images/recipe_chili_grilled_beef.jpg', 
+      new Map([["Beef", "500kg"], ["Red Chili", "50kg"], ["Green Chili", "50kg"]])),
     new Recipe('Shrimp Salad', 'Grilled shrimp with salad', 'assets/images/recipe_shrimp_salad.jpg'),
     new Recipe('Chicken Flat', 'Steamed chicken with vegies', 'assets/images/recipe_chicken_flat.jpg')
   ];

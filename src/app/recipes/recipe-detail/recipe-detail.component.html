@@ -1,10 +1,18 @@
 <!-- <div class="col-md-12">
   <img src="" alt="" class="img-responsive">
 </div> -->
-<div class="container" *ngIf="curRecipe">
-    <h1>Recipe Name: {{ curRecipe.name }}</h1>
-    <img src="" alt="" class="img-responsive">
-    <h2>{{ curRecipe.description }}</h2>
+<div class="container col-md-12 border" *ngIf="curRecipe">
+    <h3 class="text-center text-capitalize">{{ curRecipe.name }}</h3>
+    <div class="text-center">
+    <img src="{{ curRecipe.imagePath }}" alt="curRecipe.name" class="img-responsive center-block" 
+      style="width: 80%;height: 20rem;">
+    </div>
+    <p>{{ curRecipe.description }}</p>
+    <ul>
+    <li *ngFor="let item of curRecipe.ingredients | keyvalue">
+      {{ item.key }}: {{ item.value }}
+    </li>
+    </ul>
 </div>
 <!-- <div class="row">
   <div class="col-md-12">

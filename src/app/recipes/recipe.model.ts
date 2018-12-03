@@ -1,8 +1,7 @@
 export class Recipe {
 
     constructor(private name: string, private description: string, 
-        private imagePath: string) {
-            //ingredients?: Map<String, number>
+        private imagePath: string, private ingredients?: Map<string, string>) {
     }
 
 }
